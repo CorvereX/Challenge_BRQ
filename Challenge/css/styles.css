@@ -1,0 +1,184 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Zen Dots', cursive;
+}
+
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.header {
+	display: flex;
+	gap: 2px;
+	align-items: center;
+	height: 48px;
+	background-color: black;
+}
+
+.option {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+}
+
+.option a {
+	color: white;
+	text-decoration: none;
+}
+
+.option_input {
+	display: flex;
+	align-items: center;
+	padding-left: 30px;
+	background: white;
+	height: 25px;
+	border-radius: 30px;
+	overflow: hidden;
+}
+
+.option_input input {
+	outline: none;
+	border: none;
+	height: 100%;
+	border-left: 1px solid #c5c5c5;
+}
+
+.option_input input::placeholder {
+	font-family: 'Zen Dots', cursive;
+}
+
+.option + .option {
+	border-left: 1px solid white;
+}
+
+.header_logo {
+	margin-left: auto;
+	border-left: none !important;
+	z-index: 1;
+}
+
+.header_logo img {
+	margin-top: 60px;
+	width: 90px;
+}
+
+.presentation {
+	padding: 40px 120px;
+	background-image: url('../assets/honda_city.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.presentation .content {
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+}
+
+.presentation .contet img {
+	opacity: 0.8;
+}
+
+.presentation .content .sub {
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+}
+
+.catalog {
+	padding: 40px 10%;
+	width: 100%;
+	display: grid;
+	gap: 60px 30px;
+	margin: 0 auto;
+	justify-items: center;
+	font-family: initial;
+}
+
+@media (max-width: 564px) {
+	.catalog {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 768px) {
+	.catalog {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 768px) {
+	.catalog {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+.catalog > .item {
+	border: 5px #8c93ab solid;
+	padding: 5px 0;
+	width: 220px;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #22222269;
+}
+
+.catalog > .item img {
+	width: 100%;
+}
+
+.catalog .item .sub {
+	padding: 10px 0;
+	text-align: center;
+}
+
+.catalog .item .info {
+	display: flex;
+	justify-content: center;
+	padding: 10px 0;
+	gap: 5px;
+}
+
+.catalog .item .info .item {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+}
+
+.catalog .item .discount {
+	display: flex;
+	justify-content: center;
+	padding: 10px 0;
+}
+
+.catalog .item .discount span {
+	color: #fff;
+	font-size: 12px;
+	font-weight: 600;
+	background-color: #ce0707;
+	border-radius: 5px;
+	padding: 2px 7px;
+}
+
+.catalog .prices {
+	display: flex;
+	justify-content: space-between;
+}
+
+.rent,
+.buy {
+	padding: 2px;
+	color: #fff;
+	font-weight: 500;
+	background-color: #0731ce;
+}
+
+.rent {
+	border-radius: 0 5px 5px 0;
+}
+
+.buy {
+	border-radius: 5px 0 0 5px;
+}
